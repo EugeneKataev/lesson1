@@ -1,12 +1,9 @@
-let text = prompt("первая строка");
-text += prompt("вторая строка");
-text += prompt("третья строка");
-    alert(text);
+let action = prompt("Что вы хотите сделать? add, sub, mult, div");
 
-let Number = prompt("5ти значное число");
-let fiveNumber = Number % 10;
-let fourNumber = (Number % 100 - fiveNumber) / 10;
-let threeNumber = (Number % 1000 - Number % 100) / 100;
-let twoNumber = (Number % 10000 - Number % 1000) / 1000;
-let oneNumber = (Number - Number % 10000) / 10000;
-    alert(`${oneNumber} ${twoNumber} ${threeNumber} ${fourNumber} ${fiveNumber}`); //from the example in the first lesson
+let numOne = Number(prompt("первое число: "));
+let numTwo = Number(prompt("второе число: "));
+
+let result = (action === "add") && (`${numOne} + ${numTwo} = ${numOne + numTwo}`) || (action === "sub") && (`${numOne} - ${numTwo} = ${numOne - numTwo}`) ||
+    (action === "mult") && (`${numOne} * ${numTwo} = ${numOne * numTwo}`) || (action === "div") && (`${numOne} / ${numTwo} = ${numOne / numTwo}`);
+
+alert(result);
