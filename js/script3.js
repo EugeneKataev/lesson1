@@ -1,6 +1,6 @@
+let num = parseInt(prompt("введите число"));
 let result = "";
-
-for (let a = 1; a < 10; a++){
-    result += `${a} * 7 = ${a*7}${a === 9 ? '' : '\n'}`;
+for (let a = 1; a <= 100; a++) {
+    result += `${a*a <= num ? `${a}<br>`: ``}`
 }
-alert(result);
+document.write(result);

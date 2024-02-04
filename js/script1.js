@@ -1,17 +1,8 @@
 let text = '';
-let b = 20
-for (let a = 10 ; a <= b; a++){
-        text += `${a}${a === b ? "" : ","}`
+let a = 20
+let b =30
+while (a <= b) {
+        text += `${a % 1 === 0 ? `${a} `: `${a - 0.5},5 `}`
+        a += 0.5
 }
 alert(text);
-/*
-let text = '';
-let a = 10
-while (true) {
-    if (a === 20) {
-        text += `${a}`;
-        break;
-    }
-    text += `${a++},`;
-}
-alert(text);*/
