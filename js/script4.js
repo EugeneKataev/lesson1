@@ -1,4 +1,4 @@
-let value = prompt("введите строку");
+const value = prompt("введите строку");
 
 let argument = () => {
     let elem = parseInt(prompt("введите количество символов которые будем удалять"));
@@ -21,7 +21,6 @@ let textToArr = (text) => {
     return arr
 }
 let func = (text, arg) => {
-    console.log(arg);
     let textArr = textToArr(text);
     for (let a = 0; a <= textArr.length; a++) {
             while (textArr.indexOf(arg[a]) > -1) {

@@ -1,4 +1,4 @@
-const createChildArr = (numArr) => {
+let createChildArr = (numArr) => {
     let childArr;
     do {
         childArr = parseInt(prompt(`укажите длину ${numArr + 1}-го дочернего массива:`));
