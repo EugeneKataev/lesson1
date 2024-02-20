@@ -1,13 +1,10 @@
-let numX;
-let numY;
-let sign;
-do {
-    numX = parseFloat(prompt("введите число x"));
-} while (isNaN(numX));
-do {
-    numY = parseFloat(prompt("введите число y"));
-} while (isNaN(numY));
-sign = prompt("введите математическое действие");
+function entryNum(info) {
+    let num
+    do {
+         num = parseFloat(prompt(info));
+    } while (isNaN(num));
+    return num
+}
 
 function doMathPlus(value1, value2) {
     return value1 + value2;
@@ -33,25 +30,29 @@ function doMathExp(value1, value2) {
 }
 
 function doMath(x, sign, y) {
-        switch (true) {
-            case sign === "+" :
+        switch (sign) {
+            case "+" :
                 return  doMathPlus(x, y);
-            case sign === "-":
+            case "-":
                 return  doMathMinus(x, y);
-            case sign === "*":
+            case "*":
                 return  doMathMulti(x, y);
-            case sign === "/":
+            case "/":
                 if (y === 0) {
                     return "делить на ноль нельзя";
                 } else {
                     return  doMathDivision(x, y);
                 }
-            case sign === "%":
+            case "%":
                 return  doMathMod(x, y);
-            case sign === "^":
+            case "^":
                 return  doMathExp(x, y);
             default:
                 return  "вы ввели неправильно математическое действие";
         }
 }
+
+let numX = entryNum("введите число x");
+let numY = entryNum("введите число y");
+let sign = prompt("введите математическое действие");
 console.log(doMath(numX, sign, numY));

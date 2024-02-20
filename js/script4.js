@@ -22,10 +22,11 @@ let textToArr = (text) => {
 }
 let func = (text, arg) => {
     let textArr = textToArr(text);
-    for (let a = 0; a <= textArr.length; a++) {
-            while (textArr.indexOf(arg[a]) > -1) {
-                let i = textArr.indexOf(arg[a]);
+    for (let a = 0; a < arg.length; a++) {
+        let i = textArr.indexOf(arg[a]);
+            while (i > -1) {
                 textArr.splice(i, 1);
+                i = textArr.indexOf(arg[a]);
             }
     }
     return textArr.join('');
