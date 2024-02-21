@@ -1,12 +1,17 @@
-function sumNum() {
-    let result = 0;
-    return function(num) {
-        return result += num;
-    };
-}
+let ladder = {
+    step: 0,
+    up() {
+        this.step++;
+        return this;
+    },
+    down() {
+        this.step--;
+        return this;
+    },
+    showStep() {
+        alert(this.step);
+        return this
+    }
+};
 
-const sum = sumNum();
-
-console.log(sum(3));
-console.log(sum(5));
-console.log(sum(20))
+ladder.up().up().showStep().down().up().showStep();
