@@ -23,6 +23,8 @@ function validation(obj) {
         if (obj[key] === undefined || obj[key] === "" || (key === "language" && obj[key].length === 0)) {
             myForm.querySelector(`.error-${key}`).style.display = 'block';
             valid = false
+        } else {
+            myForm.querySelector(`.error-${key}`).style.display = 'none';
         }
     }
     return valid;
