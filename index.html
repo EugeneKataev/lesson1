@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example16</title>
+    <title>Example22</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<form name="form-data">
+    <div>
+        <p>Имя Фамилия: </p>
+        <input type="text" name="name" placeholder="Евгений Катаев">
+        <span class="error error-name">*Введите Имя Фамилию</span>
+    </div>
+    <div>
+        <p>Дата рождения: </p>
+        <input type="date" name="date" placeholder="дата">
+        <span class="error error-date">*Введите дату</span>
+    </div>
+    <div>
+        <p>Выберите пол: </p>
+        <input type="radio" name="gender" value="M"> <span>Мужчина</span>
+        <input type="radio" name="gender" value="W"> <span>Женщина</span>
+        <span class="error error-gender">*Выберите пол</span>
+    </div>
+    <div>
+        <p>Выберите город: </p>
+        <select name="city">
+            <option value="" ></option>
+            <option value="Харьков" >Харьков</option>
+            <option value="Киев">Киев</option>
+            <option value="Херсон">Херсон</option>
+            <option value="Херсон">Одесса</option>
+        </select>
+        <span class="error error-city">*Выберите город</span>
+    </div>
+    <div>
+        <p>Адресс:</p>
+        <textarea name="address"></textarea>
+        <span class="error error-address">*Введите адресс</span>
+    </div>
+    <div>
+        <p>Языки: </p>
+        <input type="checkbox" name="languages" value="Английский"> <span>Английский</span>
+        <input type="checkbox" name="languages" value="Французский"> <span>Французский</span>
+        <input type="checkbox" name="languages" value="Русский"> <span>Русский</span>
+        <input type="checkbox" name="languages" value="Украинский"> <span>Украинский</span>
+        <span class="error error-language">*Выберите язык</span>
+    </div>
+    <div class="btn-last">
+        <button id="btnSubmit" type="submit">Сохранить</button>
+    </div>
+</form>
 
-<script src="js/script1.js"></script>
+<!--<script src="js/data.js"></script>-->
+<script src="js/app.js"></script>
 </body>
 </html>

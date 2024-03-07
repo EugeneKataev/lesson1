@@ -1,0 +1,36 @@
+[name="form-data"]{
+    margin: auto;
+    width: fit-content;
+    font-size: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    padding: 20px;
+}
+[name="form-data"] div{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+[name="form-data"] div.btn-last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+[name="form-data"] p{
+    margin: 0;
+    padding-right: 5px;
+}
+[name="form-data"] p:first-child{
+    font-weight: bold;
+}
+[name="form-data"] input{
+    padding: 5px;
+}
+[name="form-data"] select{
+    font-size: 15px;
+}
+[name="form-data"] .error{
+    color: red;
+    display: none;
+    padding-left: 5px;
+}
