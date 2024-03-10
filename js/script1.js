@@ -1,11 +1,12 @@
-let pBlock = document.getElementById("pFocus");
-let div;
+let table = document.createElement("table");
 
-pBlock.addEventListener('mouseenter', () => {
-    div = document.createElement('div')
-    document.body.appendChild(div);
-    div.textContent = "div эллемент";
-});
-pBlock.addEventListener('mouseleave', () => {
-    div && div.remove();
-});
+for (let r = 0; r < 10; r++) {
+    let row = document.createElement("tr");
+    for (let c = 0; c < 10; c++) {
+        let column = document.createElement("td");
+        column.textContent = `${r * 10 + c + 1}`;
+        row.appendChild(column);
+    }
+    table.appendChild(row);
+}
+document.body.appendChild(table);
