@@ -1,12 +1,5 @@
-let table = document.createElement("table");
+let randomNum = Math.floor(Math.random() * 9) + 1;
 
-for (let r = 0; r < 10; r++) {
-    let row = document.createElement("tr");
-    for (let c = 0; c < 10; c++) {
-        let column = document.createElement("td");
-        column.textContent = `${r * 10 + c + 1}`;
-        row.appendChild(column);
-    }
-    table.appendChild(row);
-}
-document.body.appendChild(table);
+let img = document.createElement("img");
+img.src = `images/${randomNum}.jpg`
+document.body.appendChild(img);
