@@ -1,4 +1,10 @@
-img {
-    width: 400px;
-    height: 350px;
+#wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+#wrapper > div {
+    border: 1px solid black;
+    min-height: 100px;
+    min-width: 30%;
 }
