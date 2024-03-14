@@ -77,7 +77,7 @@ function showFinalInfo() {
     <h1>Заказ на ${productName.textContent}</h1>
     <h1>Цена: $${productPrice} x ${quantity}, итого: $${finalSum}</h1>
     <h2>ФИО: ${name}, город: ${city}, номер почты: ${post}, оплата: ${pay}</h2>
-    <h2>Комментарий: <span>${comment}</span></h2>
+    <h2>Комментарий: <span>${comment === "" ? "не указан" : comment}</span></h2>
     <h1 style="color:green">Accepted</h1>
     <button class="back-shop">Вернуться к заказу</button>
     `;
