@@ -48,3 +48,12 @@ function resetInputs() {
   document.getElementById('product').innerHTML = '';
   document.getElementById('products').innerHTML = '';
 }
+function classActive(event) {
+  let divElem = event.target.parentNode.querySelectorAll('div');
+  divElem.forEach((elem) => {
+    if (elem.classList.contains("active")) {
+      elem.classList.remove("active");
+    }
+  });
+  event.target.classList.add('active');
+}
