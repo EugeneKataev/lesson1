@@ -52,7 +52,9 @@ function classActive(event) {
       elem.classList.remove("active");
     }
   });
-  event.target.classList.add('active');
+  if (event.target.classList.contains("menu")){
+    event.target.classList.add('active');
+  }
 }
 function showFinalInfo() {
   let form = document.getElementsByName("form-reg")[0];
