@@ -5,6 +5,7 @@ function showCategories() {
     const myCategoryElement = document.createElement('div');
     myCategoryElement.textContent = category.name;
     myCategoryElement.setAttribute('data-category', category.key);
+    myCategoryElement.className = "menu";
 
     parent.appendChild(myCategoryElement);
   });
@@ -21,6 +22,7 @@ function showProductsByCategory(categoryId) {
     productElement.textContent = product.name;
     productElement.setAttribute('data-product', product.id);
     productElement.setAttribute('data-category', categoryId);
+    productElement.className = "menu";
 
     parent.appendChild(productElement);
   });
@@ -44,7 +46,7 @@ function showProductInfo(categoryId, productId) {
   parent.appendChild(buyButton);
 }
 function classActive(event) {
-  let divElem = event.target.parentNode.querySelectorAll('div');
+  let divElem = event.target.parentNode.querySelectorAll('.menu');
   divElem.forEach((elem) => {
     if (elem.classList.contains("active")) {
       elem.classList.remove("active");
@@ -78,7 +80,7 @@ function showFinalInfo() {
     <h1>Цена: $${productPrice} x ${quantity}, итого: $${finalSum}</h1>
     <h2>ФИО: ${name}, город: ${city}, номер почты: ${post}, оплата: ${pay}</h2>
     <h2>Комментарий: <span>${comment === "" ? "не указан" : comment}</span></h2>
-    <h1 style="color:green">Accepted</h1>
+    <h1 style="color:green">Принят</h1>
     <button class="back-shop">Вернуться к заказу</button>
     `;
   }
