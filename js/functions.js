@@ -33,7 +33,7 @@ function showProductInfo(categoryId, productId) {
   const parent = document.getElementById('product');
   parent.innerHTML = `
     <h2 class="productName">${selectedProduct.name}</h2>
-    <p class="productPrice">Price: $${selectedProduct.price}</p>
+    <p class="productPrice" data-price=${selectedProduct.price}>Price: $${selectedProduct.price}</p>
     <p>${selectedProduct.description}</p>
   `;
 
@@ -43,11 +43,6 @@ function showProductInfo(categoryId, productId) {
   buyButton.setAttribute('class', 'btnSubmit');
   parent.appendChild(buyButton);
 }
-function resetInputs() {
-  document.getElementById('info').innerHTML = '';
-  document.getElementById('product').innerHTML = '';
-  document.getElementById('products').innerHTML = '';
-}
 function classActive(event) {
   let divElem = event.target.parentNode.querySelectorAll('div');
   divElem.forEach((elem) => {
@@ -56,4 +51,71 @@ function classActive(event) {
     }
   });
   event.target.classList.add('active');
+}
+function showFinalInfo() {
+  let form = document.getElementsByName("form-reg")[0];
+  let productName = document.querySelector('.productName');
+  let productPrice = document.querySelector('.productPrice').getAttribute("data-price");
+  let infoBlock = document.getElementById('info');
+  let name = form.name.value;
+  let city = form.city.value;
+  let post = form.post.value;
+  let pay = form.pay.value;
+  let quantity = form.quantity.value;
+  let comment = form.comment.value;
+  let formObj = {
+    name,
+    city,
+    post,
+    pay,
+    quantity,
+  }
+  if(validation(form, formObj)){
+    form.style.display = "none";
+    let finalSum = parseFloat(productPrice) * parseFloat(quantity);
+    infoBlock.innerHTML = `
+    <h1>Заказ на ${productName.textContent}</h1>
+    <h1>Цена: $${productPrice} x ${quantity}, итого: $${finalSum}</h1>
+    <h2>ФИО: ${name}, город: ${city}, номер почты: ${post}, оплата: ${pay}</h2>
+    <h2>Комментарий: <span>${comment}</span></h2>
+    <h1 style="color:green">Accepted</h1>
+    <button class="back-shop">Вернуться к заказу</button>
+    `;
+  }
+}
+function showFormReg() {
+  let form = document.getElementsByName("form-reg")[0];
+  form.style.display = 'block';
+}
+function validation(form, obj) {
+  let valid = true;
+  let elements = form.querySelectorAll('input, select');
+  elements.forEach((e)=> {
+    if (e.value === "") {
+      e.style.border = "2px solid red";
+    } else {
+      e.style.border = "";
+    }
+  })
+  for(let key in obj){
+    if (obj[key] === "" || obj[key] === undefined){
+      form.querySelector(`.error-${key}`).style.display = 'block';
+      valid = false
+    } else {
+      form.querySelector(`.error-${key}`).style.display = 'none';
+    }
+  }
+  return valid
+}
+function resetInputs() {
+  let form = document.getElementsByName("form-reg")[0];
+  document.getElementById('info').innerHTML = '';
+  document.getElementById('product').innerHTML = '';
+  document.getElementById('products').innerHTML = '';
+  form.name.value = "";
+  form.city.value = "";
+  form.post.value = "";
+  form.pay.value = "";
+  form.quantity.value = "";
+  form.comment.value = "";
 }

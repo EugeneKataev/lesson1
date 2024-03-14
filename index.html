@@ -12,6 +12,49 @@
     <div id="products" class="catalog-elem"></div>
     <div id="product"></div>
   </div>
+  <form name="form-reg">
+    <h2>Оформление заказа:</h2>
+    <div>
+      <p>Фио покупателя:</p>
+      <input type="text" name="name">
+      <span class="error error-name">*Введите ФИО</span>
+    </div>
+    <div>
+      <p>Город:</p>
+      <select name="city">
+        <option value="" ></option>
+        <option value="Харьков">Харьков</option>
+        <option value="Одесса">Одесса</option>
+        <option value="Днепропетровск">Днепропетровск</option>
+        <option value="Херсон">Херсон</option>
+      </select>
+      <span class="error error-city">*Укажите Город</span>
+    </div>
+    <div>
+      <p>Отдел новой почты:</p>
+      <input type="text" name="post">
+      <span class="error error-post">*Введите номер почты</span>
+    </div>
+    <div>
+      <p>Способ оплаты:</p>
+      <select name="pay">
+        <option value="" ></option>
+        <option value="Наличкой">Наличкой</option>
+        <option value="Картой">Картой</option>
+      </select>
+      <span class="error error-pay">*Укажите способ оплаты</span>
+    </div>
+    <div>
+      <p>Количество:</p>
+      <input type="number" value="1" name="quantity">
+      <span class="error error-quantity">*Введите количество</span>
+    </div>
+    <div>
+      <p>Комментарий:</p>
+      <textarea name="comment"></textarea>
+    </div>
+    <button id="btnSubmit" type="submit">Подтвердить</button>
+  </form>
   <div id="info"></div>
 
   <script src="js/data.js"></script>

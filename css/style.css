@@ -23,3 +23,28 @@
 #product{
     text-align: center;
 }
+[name="form-reg"]{
+    width: 500px;
+    display: none;
+}
+[name="form-reg"].active{
+    display: block;
+}
+.error{
+    display: none;
+    color: red;
+}
+[name="form-reg"] div{
+    display: flex;
+    margin-bottom: 10px;
+}
+[name="form-reg"] div p{
+    font-size: 18px;
+    margin: 0;
+    padding-right: 15px;
+    min-width: 155px;
+}
+[name="form-reg"] div span{
+    margin-left: 10px;
+    font-style: italic;
+}

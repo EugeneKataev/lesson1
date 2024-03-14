@@ -14,14 +14,15 @@ document.getElementById('products').addEventListener('click', event => {
 });
 document.getElementById('product').addEventListener('click', event => {
   if (event.target.classList.contains('btnSubmit')) {
-    let productName = document.querySelector('.productName');
-    let productPrice = document.querySelector('.productPrice');
-    let infoBlock = document.getElementById('info');
-    infoBlock.innerHTML = `
-    <h1>Order for ${productName.textContent}</h1>
-    <h1>${productPrice.textContent}</h1>
-    <h1 style="color:green">Accepted</h1>
-    `;
-    setTimeout(resetInputs, 1500);
+    showFormReg();
   }
 });
+document.getElementById('btnSubmit').addEventListener("click", (e) =>{
+  e.preventDefault();
+  showFinalInfo();
+})
+document.getElementById('info').addEventListener("click", (e) =>{
+  if (e.target.classList.contains('back-shop')){
+    resetInputs();
+  }
+})
