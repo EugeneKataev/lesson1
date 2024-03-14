@@ -20,3 +20,6 @@
 .active{
     background-color: rgba(200, 200, 200, 0.8)
 }
+#product{
+    text-align: center;
+}
