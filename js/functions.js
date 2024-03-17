@@ -68,12 +68,16 @@ function showFinalInfo() {
   let quantity = form.quantity.value;
   let comment = form.comment.value;
   let formObj = {
+    productName,
+    productPrice,
     name,
     city,
     post,
     pay,
     quantity,
+    comment,
   }
+  console.log("productName " + productName + "productPrice " + productPrice);
   if(validation(form, formObj)){
     form.classList.remove("active");
     let finalSum = parseFloat(productPrice) * parseFloat(quantity);
@@ -102,11 +106,13 @@ function validation(form, obj) {
     }
   })
   for(let key in obj){
-    if (obj[key] === "" || obj[key] === undefined){
-      form.querySelector(`.error-${key}`).classList.remove("hidden");
-      valid = false
-    } else {
-      form.querySelector(`.error-${key}`).classList.add("hidden");
+    if(key !== "comment" && key !== "productName" && key !== "productPrice") {
+      if (obj[key] === "" || obj[key] === undefined) {
+        form.querySelector(`.error-${key}`).classList.remove("hidden");
+        valid = false
+      } else {
+        form.querySelector(`.error-${key}`).classList.add("hidden");
+      }
     }
   }
   return valid
@@ -122,4 +128,10 @@ function resetInputs() {
   form.pay.value = "";
   form.quantity.value = "";
   form.comment.value = "";
+}
+function showOrdersPage(btn) {
+  document.getElementById("productsBlock").classList.remove("active");
+  btn.target.classList.add("hidden");
+  document.getElementById("btnBack").classList.remove("hidden");
+  document.getElementById("ordersBlock").classList.add("active");
 }

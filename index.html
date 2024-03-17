@@ -3,59 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example21</title>
+  <title>Example23</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="wrapper">
-    <div id="categories" class="catalog-elem"></div>
-    <div id="products" class="catalog-elem"></div>
-    <div id="product"></div>
+<div class="head-block">
+  <div class="head-buttons">
+    <div class="back-button">
+      <input class="hidden" id="btnBack" type="button" value="<< вернуться">
+    </div>
+    <div class="orders-button">
+      <input id="btnOrders" type="button" value="Мои заказы">
+    </div>
   </div>
-  <form name="form-reg">
-    <h2>Оформление заказа:</h2>
-    <div>
-      <p>Фио покупателя:</p>
-      <input type="text" name="name">
-      <span class="error error-name hidden">*Введите ФИО</span>
+  <div class="active" id="productsBlock">
+    <div id="wrapper">
+      <div id="categories" class="catalog-elem"></div>
+      <div id="products" class="catalog-elem"></div>
+      <div id="product"></div>
+
     </div>
-    <div>
-      <p>Город:</p>
-      <select name="city">
-        <option value="" ></option>
-        <option value="Харьков">Харьков</option>
-        <option value="Одесса">Одесса</option>
-        <option value="Днепропетровск">Днепропетровск</option>
-        <option value="Херсон">Херсон</option>
-      </select>
-      <span class="error error-city hidden">*Укажите Город</span>
-    </div>
-    <div>
-      <p>Отдел новой почты:</p>
-      <input type="text" name="post">
-      <span class="error error-post hidden">*Введите номер почты</span>
-    </div>
-    <div>
-      <p>Способ оплаты:</p>
-      <select name="pay">
-        <option value="" ></option>
-        <option value="Наличкой">Наличкой</option>
-        <option value="Картой">Картой</option>
-      </select>
-      <span class="error error-pay hidden">*Укажите способ оплаты</span>
-    </div>
-    <div>
-      <p>Количество:</p>
-      <input type="number" value="1" name="quantity">
-      <span class="error error-quantity hidden">*Введите количество</span>
-    </div>
-    <div>
-      <p>Комментарий:</p>
-      <textarea name="comment"></textarea>
-    </div>
-    <button id="btnSubmit" type="submit">Подтвердить</button>
-  </form>
-  <div id="info"></div>
+    <form name="form-reg">
+      <h2>Оформление заказа:</h2>
+      <div>
+        <p>Фио покупателя:</p>
+        <input type="text" name="name">
+        <span class="error error-name hidden">*Введите ФИО</span>
+      </div>
+      <div>
+        <p>Город:</p>
+        <select name="city">
+          <option value="" ></option>
+          <option value="Харьков">Харьков</option>
+          <option value="Одесса">Одесса</option>
+          <option value="Днепропетровск">Днепропетровск</option>
+          <option value="Херсон">Херсон</option>
+        </select>
+        <span class="error error-city hidden">*Укажите Город</span>
+      </div>
+      <div>
+        <p>Отдел новой почты:</p>
+        <input type="text" name="post">
+        <span class="error error-post hidden">*Введите номер почты</span>
+      </div>
+      <div>
+        <p>Способ оплаты:</p>
+        <select name="pay">
+          <option value="" ></option>
+          <option value="Наличкой">Наличкой</option>
+          <option value="Картой">Картой</option>
+        </select>
+        <span class="error error-pay hidden">*Укажите способ оплаты</span>
+      </div>
+      <div>
+        <p>Количество:</p>
+        <input type="number" value="1" name="quantity">
+        <span class="error error-quantity hidden">*Введите количество</span>
+      </div>
+      <div>
+        <p>Комментарий:</p>
+        <textarea name="comment"></textarea>
+      </div>
+      <button id="btnSubmit" type="submit">Подтвердить</button>
+    </form>
+    <div id="info"></div>
+  </div>
+  <div id="ordersBlock"></div>
+</div>
 
   <script src="js/data.js"></script>
   <script src="js/functions.js"></script>

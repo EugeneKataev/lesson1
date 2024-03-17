@@ -1,8 +1,26 @@
+.head-block{
+    max-width: 706px;
+}
+.head-buttons{
+    display: flow-root;
+    margin-bottom: 15px;
+}
+#productsBlock.active{
+    display: block;
+}
+#productsBlock{
+    display: none;
+}
 #wrapper {
     display: flex;
     gap: 20px;
 }
-
+#ordersBlock{
+    display: none;
+}
+#ordersBlock.active{
+    display: flex;
+}
 #wrapper > div {
     border: 1px solid black;
     min-height: 100px;
@@ -17,7 +35,7 @@
 #wrapper > .catalog-elem > div:hover{
     background-color: rgba(200, 200, 200, 0.8)
 }
-.active{
+.menu.active{
     background-color: rgba(200, 200, 200, 0.8)
 }
 #product{
@@ -57,4 +75,40 @@ span.error{
 }
 [name="form-reg"] select.error{
     border: 2px solid red;
+}
+.orders-button {
+    float: right;
+}
+.orders-button input{
+    border: none;
+    padding: 10px;
+    background-color: mediumseagreen;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+.orders-button input:hover{
+    background-color: limegreen;
+}
+.orders-button input.hidden{
+    display: none;
+}
+.back-button{
+    float: left;
+}
+.back-button input{
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #8f8f8f;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.back-button input:hover {
+    background-color: #999999;
+}
+.back-button input.hidden{
+    display: none;
 }

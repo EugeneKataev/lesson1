@@ -26,3 +26,6 @@ document.getElementById('info').addEventListener("click", (e) =>{
     resetInputs();
   }
 })
+document.getElementById('btnOrders').addEventListener("click", (e) => {
+  showOrdersPage(e);
+})
