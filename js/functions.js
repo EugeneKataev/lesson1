@@ -75,7 +75,7 @@ function showFinalInfo() {
     quantity,
   }
   if(validation(form, formObj)){
-    form.style.display = "none";
+    form.classList.remove("active");
     let finalSum = parseFloat(productPrice) * parseFloat(quantity);
     infoBlock.innerHTML = `
     <h1>Заказ на ${productName.textContent}</h1>
@@ -89,24 +89,24 @@ function showFinalInfo() {
 }
 function showFormReg() {
   let form = document.getElementsByName("form-reg")[0];
-  form.style.display = 'block';
+  form.classList.add("active");
 }
 function validation(form, obj) {
   let valid = true;
   let elements = form.querySelectorAll('input, select');
   elements.forEach((e)=> {
     if (e.value === "") {
-      e.style.border = "2px solid red";
+      e.classList.add("error");
     } else {
-      e.style.border = "";
+      e.classList.remove("error");
     }
   })
   for(let key in obj){
     if (obj[key] === "" || obj[key] === undefined){
-      form.querySelector(`.error-${key}`).style.display = 'block';
+      form.querySelector(`.error-${key}`).classList.remove("hidden");
       valid = false
     } else {
-      form.querySelector(`.error-${key}`).style.display = 'none';
+      form.querySelector(`.error-${key}`).classList.add("hidden");
     }
   }
   return valid

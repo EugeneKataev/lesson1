@@ -29,9 +29,10 @@
 }
 [name="form-reg"].active{
     display: block;
+    background: none;
 }
-.error{
-    display: none;
+span.error{
+    display: block;
     color: red;
 }
 [name="form-reg"] div{
@@ -47,4 +48,13 @@
 [name="form-reg"] div span{
     margin-left: 10px;
     font-style: italic;
+}
+[name="form-reg"] div span.hidden{
+    display: none;
+}
+[name="form-reg"] input.error{
+    border: 2px solid red;
+}
+[name="form-reg"] select.error{
+    border: 2px solid red;
 }
