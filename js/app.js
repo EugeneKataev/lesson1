@@ -1,16 +1,20 @@
 window.addEventListener('DOMContentLoaded', showCategories);
 
 document.getElementById('categories').addEventListener('click', event => {
-  const categoryId = event.target.getAttribute('data-category');
-  classActive(event);
-  showProductsByCategory(categoryId);
+  if (event.target.classList.contains("menu")) {
+    const categoryId = event.target.getAttribute('data-category');
+    classActive(event);
+    showProductsByCategory(categoryId);
+  }
 });
 
 document.getElementById('products').addEventListener('click', event => {
-  const productId = event.target.getAttribute('data-product');
-  const categoryId = event.target.getAttribute('data-category');
-  classActive(event);
-  showProductInfo(categoryId, productId);
+  if (event.target.classList.contains("menu")) {
+    const productId = event.target.getAttribute('data-product');
+    const categoryId = event.target.getAttribute('data-category');
+    classActive(event);
+    showProductInfo(categoryId, productId);
+  }
 });
 document.getElementById('product').addEventListener('click', event => {
   if (event.target.classList.contains('btnSubmit')) {
@@ -35,6 +39,10 @@ document.getElementById('btnBack').addEventListener("click", (e) => {
 })
 document.getElementById('ordersBlock').addEventListener("click", (e) => {
   if (e.target.classList.contains("order")){
-    console.log(e.target);
+    const orderId = e.target.getAttribute("data-id");
+    showOrder(orderId, e);
+  } else if(e.target.classList.contains("delete-order")) {
+    delOrder(e);
   }
+
 })

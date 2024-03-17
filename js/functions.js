@@ -35,13 +35,13 @@ function showProductInfo(categoryId, productId) {
   const parent = document.getElementById('product');
   parent.innerHTML = `
     <h2 class="productName">${selectedProduct.name}</h2>
-    <p class="productPrice" data-price=${selectedProduct.price}>Price: $${selectedProduct.price}</p>
+    <p class="productPrice" data-price=${selectedProduct.price}>Цена: $${selectedProduct.price}</p>
     <p>${selectedProduct.description}</p>
   `;
 
   const buyButton = document.createElement('input');
   buyButton.setAttribute('type', 'button');
-  buyButton.setAttribute('value', 'Buy');
+  buyButton.setAttribute('value', 'Купить');
   buyButton.setAttribute('class', 'btnSubmit');
   parent.appendChild(buyButton);
 }
@@ -170,18 +170,69 @@ function setOrdersToLocalStorage(orderObj) {
   localStorageOrders.push(orderObj);
   localStorage.setItem(`ordersData`, JSON.stringify(localStorageOrders));
 }
-function showMyOrders(){
+
+function showMyOrders(delCase){
   let ordersData = JSON.parse(window.localStorage.getItem("ordersData"));
   const ordersBlock = document.getElementById("ordersBlock");
+  if (delCase) {
+    ordersBlock.innerHTML = "";
+    updateIdLocalStorage(ordersData);
+  }
   ordersData.forEach(order => {
+    const divBlock = document.createElement("div");
+    divBlock.classList.add("order-block");
+    const btnBlock = document.createElement("div");
+    btnBlock.classList.add("del");
+    const btn = document.createElement("button");
+    btn.textContent = "Удалить";
+    btn.classList.add("delete-order");
+    btn.setAttribute("del-id", order.id);
+    btnBlock.appendChild(btn);
     const orderElem = document.createElement("div");
-    orderElem.textContent = `Дата: ${order.date}, Сумма: ${order.productPrice} $`;
+    orderElem.textContent = `Дата: ${order.date}, Сумма: ${order.productPrice * order.quantity}$`;
     orderElem.classList.add("order");
     orderElem.setAttribute("data-id", order.id);
-    ordersBlock.appendChild(orderElem);
+    divBlock.appendChild(orderElem);
+    divBlock.appendChild(btnBlock);
+    ordersBlock.appendChild(divBlock);
   })
-  console.log(ordersData);
 }
-function showOrder(){
-
+function updateIdLocalStorage(ordersData) {
+  ordersData.forEach((obj, index) => {
+    obj.id = index + 1;
+  });
+  localStorage.setItem("ordersData", JSON.stringify(ordersData));
+}
+function showOrder(orderId, elem){
+  let elemInfo = elem.target.querySelector(".order-info");
+  if (elemInfo !== null){
+    elemInfo.remove();
+  } else {
+    let ordersData = JSON.parse(window.localStorage.getItem("ordersData"));
+    const orderObj = ordersData.find(obj => obj.id === Number(orderId));
+    let infoOrder = document.createElement("div");
+    infoOrder.classList.add("order-info");
+    infoOrder.innerHTML = `
+  <p>Товар: ${orderObj.productName}</p>
+  <p>Цена: ${orderObj.productPrice}$</p>
+  <p>Количество: ${orderObj.quantity}</p>
+  <p>Cпособ оплаты: ${orderObj.pay}</p>
+  <p>Номер почты: ${orderObj.post}</p>
+  <p>Имя Фамилия: ${orderObj.name}</p>
+  <p>Город: ${orderObj.city}</p>
+  <p>Комментарий: ${orderObj.comment}</p>
+  `;
+    elem.target.appendChild(infoOrder);
+  }
+}
+function delOrder(elem) {
+  let checkup = confirm("Вы уверены что хотите удалить этот товар?");
+  if (checkup) {
+    let deleteId = elem.target.getAttribute("del-id");
+    let ordersData = JSON.parse(window.localStorage.getItem("ordersData"));
+    let updateOrders = ordersData.filter(obj => obj.id !== Number(deleteId));
+    console.log(updateOrders);
+    localStorage.setItem("ordersData", JSON.stringify(updateOrders));
+    showMyOrders(true);
+  }
 }
