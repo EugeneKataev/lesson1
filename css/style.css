@@ -19,7 +19,18 @@
     display: none;
 }
 #ordersBlock.active{
-    display: flex;
+    display: block;
+}
+#ordersBlock .order{
+    padding: 10px 5px;
+    border: 1px solid #cecbca;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#ordersBlock .order:hover{
+    cursor: pointer;
+    border: 1px solid #b0acab;
+    background-color: #ebeaea;
 }
 #wrapper > div {
     border: 1px solid black;

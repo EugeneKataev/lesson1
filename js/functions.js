@@ -68,7 +68,7 @@ function showFinalInfo() {
   let quantity = form.quantity.value;
   let comment = form.comment.value;
   let formObj = {
-    productName,
+    productName: productName.textContent,
     productPrice,
     name,
     city,
@@ -89,6 +89,7 @@ function showFinalInfo() {
     <h1 style="color:green">Принят</h1>
     <button class="back-shop">Вернуться к заказу</button>
     `;
+    setOrdersToLocalStorage(formObj);
   }
 }
 function showFormReg() {
@@ -134,4 +135,53 @@ function showOrdersPage(btn) {
   btn.target.classList.add("hidden");
   document.getElementById("btnBack").classList.remove("hidden");
   document.getElementById("ordersBlock").classList.add("active");
+}
+function showProductPage(btn) {
+  document.getElementById("productsBlock").classList.add("active");
+  btn.target.classList.add("hidden");
+  document.getElementById('btnOrders').classList.remove("hidden");
+  document.getElementById("btnBack").classList.add("hidden");
+  let ordersBlock = document.getElementById("ordersBlock");
+  ordersBlock.classList.remove("active");
+  ordersBlock.innerHTML = '';
+}
+function formatDate() {
+  const currentDate = new Date();
+
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth() + 1;
+  const year = currentDate.getFullYear();
+  const addZero = (number) => (number < 10 ? "0" + number : number);
+  const realDate = `${addZero(day)}-${addZero(month)}-${year}`;
+    return realDate;
+}
+function setOrdersToLocalStorage(orderObj) {
+  let localStorageOrders = (window.localStorage.getItem("ordersData"));
+  let id;
+  if (localStorageOrders === null) {
+    localStorageOrders = [];
+    id = 1;
+  } else {
+    localStorageOrders = JSON.parse(localStorageOrders);
+    id = localStorageOrders.length + 1;
+  }
+  orderObj.date = formatDate();
+  orderObj.id = id;
+  localStorageOrders.push(orderObj);
+  localStorage.setItem(`ordersData`, JSON.stringify(localStorageOrders));
+}
+function showMyOrders(){
+  let ordersData = JSON.parse(window.localStorage.getItem("ordersData"));
+  const ordersBlock = document.getElementById("ordersBlock");
+  ordersData.forEach(order => {
+    const orderElem = document.createElement("div");
+    orderElem.textContent = `Дата: ${order.date}, Сумма: ${order.productPrice} $`;
+    orderElem.classList.add("order");
+    orderElem.setAttribute("data-id", order.id);
+    ordersBlock.appendChild(orderElem);
+  })
+  console.log(ordersData);
+}
+function showOrder(){
+
 }

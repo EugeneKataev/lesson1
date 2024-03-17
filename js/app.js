@@ -28,4 +28,13 @@ document.getElementById('info').addEventListener("click", (e) =>{
 })
 document.getElementById('btnOrders').addEventListener("click", (e) => {
   showOrdersPage(e);
+  showMyOrders();
+})
+document.getElementById('btnBack').addEventListener("click", (e) => {
+  showProductPage(e);
+})
+document.getElementById('ordersBlock').addEventListener("click", (e) => {
+  if (e.target.classList.contains("order")){
+    console.log(e.target);
+  }
 })
