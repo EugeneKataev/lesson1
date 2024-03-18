@@ -1,48 +1,24 @@
-window.addEventListener('DOMContentLoaded', showCategories);
+window.addEventListener('DOMContentLoaded', showUsers);
 
-document.getElementById('categories').addEventListener('click', event => {
-  if (event.target.classList.contains("menu")) {
-    const categoryId = event.target.getAttribute('data-category');
-    classActive(event);
-    showProductsByCategory(categoryId);
-  }
-});
-
-document.getElementById('products').addEventListener('click', event => {
-  if (event.target.classList.contains("menu")) {
-    const productId = event.target.getAttribute('data-product');
-    const categoryId = event.target.getAttribute('data-category');
-    classActive(event);
-    showProductInfo(categoryId, productId);
-  }
-});
-document.getElementById('product').addEventListener('click', event => {
-  if (event.target.classList.contains('btnSubmit')) {
-    showFormReg();
-  }
-});
-document.getElementById('btnSubmit').addEventListener("click", (e) =>{
-  e.preventDefault();
-  showFinalInfo();
+document.getElementById("users").addEventListener("click", (e)=>{
+    switch (true) {
+        case e.target.classList.contains("btn-view"):
+            panelEditInfoAdd("view");
+            showUserViewInfo(e);
+                break;
+        case e.target.classList.contains("btn-edit"):
+            panelEditInfoAdd("edit");
+            editUser(e);
+                break;
+        case e.target.classList.contains("btn-del"):
+            deleteUser(e);
+                break;
+    }
 })
-document.getElementById('info').addEventListener("click", (e) =>{
-  if (e.target.classList.contains('back-shop')){
-    resetInputs();
-  }
+document.getElementById("btnSave").addEventListener("click", (e)=>{
+    userSave(e); //create and edit
 })
-document.getElementById('btnOrders').addEventListener("click", (e) => {
-  showOrdersPage(e);
-  showMyOrders();
-})
-document.getElementById('btnBack').addEventListener("click", (e) => {
-  showProductPage(e);
-})
-document.getElementById('ordersBlock').addEventListener("click", (e) => {
-  if (e.target.classList.contains("order")){
-    const orderId = e.target.getAttribute("data-id");
-    showOrder(orderId, e);
-  } else if(e.target.classList.contains("delete-order")) {
-    delOrder(e);
-  }
-
+document.getElementById("add-user").addEventListener("click", (e)=>{
+    panelEditInfoAdd("add");
+    createUser();
 })

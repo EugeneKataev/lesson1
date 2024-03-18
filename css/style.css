@@ -1,148 +1,106 @@
-.head-block{
-    max-width: 706px;
-}
-.head-buttons{
-    display: flow-root;
-    margin-bottom: 15px;
-}
-#productsBlock.active{
+.users{
     display: block;
+    font-size: 23px;
+    background: #f0f5fa;
 }
-#productsBlock{
-    display: none;
-}
-#wrapper {
-    display: flex;
-    gap: 20px;
-}
-#ordersBlock{
-    display: none;
-}
-#ordersBlock.active{
-    display: block;
-}
-#ordersBlock .order{
-    padding: 10px 5px;
-    border: 1px solid #cecbca;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-#ordersBlock .order-block{
-    display: flex;
-}
-#ordersBlock .order-block .del{
-    display: flex;
-    align-items: center;
-}
-#ordersBlock .order-block .del button{
-    background: #f6b6bf;
-    border: none;
-    border-radius: 3px;
-    font-size: 14px;
-    cursor: pointer;
-    padding: 10px;
-    margin-left: 5px;
-}
-#ordersBlock .order-block .del button:hover{
-    background:#f4a4af ;
-}
-#ordersBlock .order-info{
-    font-style: italic;
-}
-#ordersBlock .order:hover{
-    cursor: pointer;
-    border: 1px solid #b0acab;
-    background-color: #ebeaea;
-}
-#wrapper > div {
-    border: 1px solid black;
-    min-height: 100px;
-    min-width: 220px;
-}
-#wrapper > .catalog-elem > div{
-    padding: 10px;
-    font-size: 21px;
-    text-align: center;
-    cursor: pointer;
-}
-#wrapper > .catalog-elem > div:hover{
-    background-color: rgba(200, 200, 200, 0.8)
-}
-.menu.active{
-    background-color: rgba(200, 200, 200, 0.8)
-}
-#product{
-    text-align: center;
-}
-[name="form-reg"]{
-    width: 500px;
-    display: none;
-}
-[name="form-reg"].active{
-    display: block;
-    background: none;
-}
-span.error{
-    display: block;
-    color: red;
-}
-[name="form-reg"] div{
+.users .user{
     display: flex;
     margin-bottom: 10px;
-}
-[name="form-reg"] div p{
-    font-size: 18px;
-    margin: 0;
-    padding-right: 15px;
-    min-width: 155px;
-}
-[name="form-reg"] div span{
-    margin-left: 10px;
-    font-style: italic;
-}
-[name="form-reg"] div span.hidden{
-    display: none;
-}
-[name="form-reg"] input.error{
-    border: 2px solid red;
-}
-[name="form-reg"] select.error{
-    border: 2px solid red;
-}
-.orders-button {
-    float: right;
-}
-.orders-button input{
-    border: none;
-    padding: 10px;
-    background-color: mediumseagreen;
+    width: max-content;
+    border: 1px solid;
     border-radius: 5px;
-    cursor: pointer;
+}
+.users .user .user-buttons{
+    display: flex;
+}
+.users .user .user-name{
+    padding: 6px 8px;
+}
+.users .user .user-buttons .btn{
+    padding-left: 5px;
+    border: none;
+    background: #cbc0e6ad;
+    border-right: 1px solid;
     font-size: 15px;
+}
+.users .user .user-buttons .btn:hover {
+    background: #cbc0e65c;
+    cursor: pointer;
+}
+.users .user .user-buttons .btn.btn-edit:hover {
+    background: #c0dce65c;
+}
+.users .user .user-buttons .btn.btn-del:hover {
+    background: #e6c0c066;
+}
+.users .user .user-buttons .btn:last-child{
+    border-right: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#work-panel{
+    display: block;
+}
+#work-panel .head-block-edit{
+    width: fit-content;
+    background: #bacbe678;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    min-height: 248px;
+    min-width: 215px;
+}
+#work-panel .block-edit{
+    display: flex;
+    gap: 5px;
+}
+#work-panel .block-edit button{
+    margin: auto;
+    background: #cbc0e6ad;
+    border: none;
+    padding: 8px 22px;
+    cursor: pointer;
+}
+#work-panel .block-edit button:hover{
+    background: #c4b8e4;
+}
+#work-panel .block-edit input{
+    border: 1px solid;
+    border-radius: 5px;
+    margin: auto;
+    height: 20px;
+}
+#work-panel .block-edit input.error{
+    border: 1px solid red;
+}
+#work-panel .block-edit p{
+    font-size: 18px;
+    min-width: 45px;
+    text-align: center;
+}
+#work-panel .block-edit p:last-child{
     font-weight: 600;
 }
-.orders-button input:hover{
-    background-color: limegreen;
+#work-panel h2{
+    text-align: center;
+    margin: 0;
 }
-.orders-button input.hidden{
+#panel-add-edit{
     display: none;
 }
-.back-button{
-    float: left;
+#panel-add-edit.active{
+    display: block;
 }
-.back-button input{
+.add-block{
+
+}
+#add-user{
+    background: #c6e6c0db;
     border: none;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: #8f8f8f;
-    font-size: 14px;
-    font-weight: bold;
+    padding: 8px 22px;
     cursor: pointer;
+    float: right;
+    margin-bottom: 10px;
 }
-.back-button input:hover {
-    background-color: #999999;
-}
-.back-button input.hidden{
-    display: none;
+#add-user:hover{
+    background: #bae2b3eb;
 }
