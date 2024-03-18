@@ -1,6 +1,9 @@
 let result = "";
 
-for (let a = 1; a < 10; a++){
-    result += `${a} * 7 = ${a*7}${a === 9 ? '' : '\n'}`;
+let num = 7;
+let max = 9;
+
+for (let a = 1; a <= max; a++){
+    result += `${a} * ${num} = ${a*num}${a === max ? '' : '\n'}`;
 }
 alert(result);
