@@ -3,7 +3,7 @@ const btnModal = document.getElementById("openModal");
 const btnAlert = document.getElementById("openAlert");
 const span = document.getElementsByClassName("close")[0];
 const tooltip = document.getElementById("info");
-const AlertBlock = document.getElementById("headAlert");
+const alertBlock = document.getElementById("headAlert");
 const inputDate = document.getElementById("form_date");
 const formInfoDate = document.querySelector(".form-info-date");
 
@@ -21,7 +21,7 @@ btnModal.addEventListener("mouseout", () => {
 });
 
 btnAlert.addEventListener("click", () => {
-    AlertBlock.classList.toggle("active");
+    alertBlock.classList.toggle("active");
 })
 
 span.addEventListener("click", () => {
