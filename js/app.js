@@ -10,12 +10,14 @@ const formInfoDate = document.querySelector(".form-info-date");
 btnModal.addEventListener("click", () => {
     modal.classList.add("active");
 });
+
 btnModal.addEventListener("mouseover", (e) => {
     tooltip.classList.add("active");
     let btnWidth = e.target.offsetWidth;
     tooltip.style.left = `${btnWidth + 4}px`
     tooltip.style.top = `-17px`
 });
+
 btnModal.addEventListener("mouseout", () => {
     tooltip.classList.remove("active");
 });
@@ -33,6 +35,7 @@ window.addEventListener("click", (e) => {
         modal.classList.remove("active");
     }
 });
+
 inputDate.addEventListener("blur", (e) => {
     let valInput = e.target.value;
     const reg = /^(0[1-9]|[1-2][0-9]|3[0-1])\.(0[1-9]|1[0-2])\.\d{4}$/;
