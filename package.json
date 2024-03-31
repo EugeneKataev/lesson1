@@ -1,0 +1,23 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EugeneKataev/Examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EugeneKataev/Examples/issues"
+  },
+  "homepage": "https://github.com/EugeneKataev/Examples#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "moment": "^2.30.1"
+  }
+}
