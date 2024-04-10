@@ -1,4 +1,3 @@
-const slides = ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg", "images/5.jpg"];
 let currentSlide = 0;
 let intervalMoveSlide;
 
@@ -17,7 +16,9 @@ function loadSlides() {
     centerBlock.querySelector("img").src = slides[currentSlide];
 
 }
+
 function sliderAutoMove(action) {
+
     if (action) {
         intervalMoveSlide = setTimeout(nextStepSlide, 3000);
     } else {
@@ -60,6 +61,7 @@ function getNextSlide(currentImg) {
 
     return slides[rightIndex];
 }
+
 function getBackSlide(currentImg) {
     let leftIndex = currentImg - 1;
     if (leftIndex < 0) {
