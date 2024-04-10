@@ -1,28 +1,32 @@
-window.addEventListener('DOMContentLoaded', loadData());
+window.addEventListener('DOMContentLoaded', () => {
 
-document.querySelector(".head-nav").addEventListener("click", (e) => {
-    if (e.target.classList.contains("nav-link")) {
-        let id = e.target.id;
-        loadData(id);
-    }
+        loadSlides();
+        sliderAutoMove(true);
+        numImgSlide();
+});
+
+
+document.getElementById("back").addEventListener("click", () => {
+
+        sliderAutoMove(false);
+        backStepSlide();
+
 })
 
-document.getElementById("menu-subject").addEventListener("click", (e) => {
-    if (e.target.tagName === "LI") {
-        let url = e.target.getAttribute("data-url");
-        let category = e.target.getAttribute("data-category");
-        loadInfoTarget(url, category)
+document.getElementById("next").addEventListener("click", () => {
 
-        const allLi = document.querySelectorAll('#menu-subject li');
-        allLi.forEach(li => {
-            li.classList.remove('active');
-        });
+        sliderAutoMove(false);
+        nextStepSlide();
 
-        e.target.classList.add("active");
-    }
-    if (e.target.classList.contains("btn-page")) {
-        let category = e.target.getAttribute("data-category");
-        let page = e.target.getAttribute("data-page");
-        loadData(category, page);
-    }
+})
+
+document.querySelector(".slider-main").addEventListener("transitionend", (e) => {
+
+        let step = e.target.getAttribute("data-step");
+
+        changeAfterTransition(e.target, step);
+        numImgSlide();
+        sliderAutoMove(false);
+        sliderAutoMove(true);
+
 })

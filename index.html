@@ -3,38 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example27</title>
+  <title>Example28</title>
   <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="head-panel row">
-    <ul class="head-nav nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <li class="nav-item">
-        <button class="head-nav-btn nav-link active" id="people" data-bs-toggle="pill" type="button" aria-selected="true">People</button>
-      </li>
-      <li class="nav-item">
-        <button class="head-nav-btn nav-link" id="planets" data-bs-toggle="pill" type="button" aria-selected="false">Planets</button>
-      </li>
-      <li class="nav-item">
-        <button class="head-nav-btn nav-link" id="vehicles" data-bs-toggle="pill" type="button" aria-selected="false">Vehicles</button>
-      </li>
-    </ul>
-  </div>
-  <div class="container">
-    <div class="main-block row">
-      <div class="col-4">
-        <div id="menu-subject" class="menu">
-          <div class="pagination-panel"></div>
-        </div>
-      </div>
-      <div class="col-8 menu">
-        <div id="info">
-
-        </div>
-      </div>
+<div class="head-slider">
+  <div class="mask">
+    <div class="image-block back">
+      <div id="back" class="button-navigate"><<</div>
+    </div>
+    <div class="image-block main-block">
+      <div id="num_slide"></div>
+    </div>
+    <div class="image-block next">
+      <div id="next" class="button-navigate">>></div>
     </div>
   </div>
+  <div class="slider-main">
+    <div class="image-block slide-img-block">
+      <img>
+    </div>
+    <div class="image-block slide-img-block">
+      <img>
+    </div>
+    <div class="image-block slide-img-block">
+      <img>
+    </div>
+  </div>
+</div>
 
   <script src="js/functions.js"></script>
   <script src="js/app.js"></script>
