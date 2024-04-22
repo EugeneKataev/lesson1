@@ -16,6 +16,8 @@ document.getElementById("submit-info").addEventListener("click",(e)=>{
                 carObj.setOwner(personObj);
                 console.log(carObj);
                 infoBlock.textContent = carObj.showInfo();
+        } else {
+                infoBlock.textContent = "";
         }
 
 })

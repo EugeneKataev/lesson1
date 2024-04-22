@@ -14,12 +14,12 @@ function Car(model, year) {
     this.owner = null;
 
     this.showInfo = function () {
-        console.log("Модель: " + this.model);
-        console.log("Год выпуска: " + this.year);
+
         let info = `${this.model}, ${this.year}`
         if (this.owner !== null) {
-            info += ` Владелец: ${this.owner.showInfo()}`;
+            info += this.owner ? ` Владелец: ${this.owner.showInfo()}` : '';
         }
+
         return info;
     };
 
