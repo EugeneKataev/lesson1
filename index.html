@@ -3,33 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example28</title>
+  <title>Example29</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="head-slider">
-  <div class="mask">
-    <div class="image-block back">
-      <div id="back" class="button-navigate"><<</div>
-    </div>
-    <div class="image-block main-block">
-      <div id="num_slide"></div>
-    </div>
-    <div class="image-block next">
-      <div id="next" class="button-navigate">>></div>
-    </div>
+<div class="main-block">
+  <div class="block-form">
+    <p>Имя:</p>
+    <input type="text" id="people-name">
+    <p>Возраст:</p>
+    <input type="number" id="people-age">
   </div>
-  <div class="slider-main">
-    <div class="image-block slide-img-block">
-      <img>
-    </div>
-    <div class="image-block slide-img-block">
-      <img>
-    </div>
-    <div class="image-block slide-img-block">
-      <img>
-    </div>
+  <div class="block-form">
+    <p>Модель:</p>
+    <input type="text" id="car-model">
+    <p>Год машины:</p>
+    <input type="number" id="car-year">
   </div>
+  <div class="block-btn">
+    <button id="submit-info">Добавить данные</button>
+  </div>
+</div>
+<div class="info">
+  <p id="info"></p>
 </div>
 
   <script src="js/data.js"></script>

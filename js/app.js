@@ -1,28 +1,21 @@
-window.addEventListener('DOMContentLoaded', () => {
+document.getElementById("submit-info").addEventListener("click",(e)=>{
+        const infoBlock = document.getElementById("info");
 
-        loadSlides();
-        sliderAutoMove(true);
-        numImgSlide();
-});
+        const inputName = document.getElementById("people-name");
+        const inputAge = document.getElementById("people-age");
+        const inputCarModel = document.getElementById("car-model");
+        const inputCarYear = document.getElementById("car-year");
 
+        let arrInputs = [inputName, inputAge, inputCarModel, inputCarYear];
 
-document.getElementById("back").addEventListener("click", () => {
+        let valid = validate(arrInputs);
 
-        sliderAutoMove(false);
-        backStepSlide();
-})
+        if (valid) {
+                const personObj = new Person(inputName.value, inputAge.value);
+                const carObj = new Car(inputCarModel.value, inputCarYear.value);
+                carObj.setOwner(personObj);
+                console.log(carObj);
+                infoBlock.textContent = carObj.showInfo();
+        }
 
-document.getElementById("next").addEventListener("click", () => {
-
-        sliderAutoMove(false);
-        nextStepSlide();
-})
-
-document.querySelector(".slider-main").addEventListener("transitionend", (e) => {
-        let step = e.target.getAttribute("data-step");
-
-        changeAfterTransition(e.target, step);
-        numImgSlide();
-        sliderAutoMove(false);
-        sliderAutoMove(true);
 })
