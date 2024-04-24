@@ -1,9 +1,8 @@
 let hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
-console.log(hamburger.getToppings());
+
 hamburger.addTopping(Hamburger.TOPPING_MAYO);
 
-
-console.log("Calories: " + hamburger.calculateCal());
+console.log("Calories: " + hamburger.calculateCalories());
 
 console.log("Price: " + hamburger.calculatePrice());
 

@@ -1,9 +1,8 @@
 
-
 class Hamburger {
     static SIZE_SMALL = { price: 50, cal: 20 };
     static SIZE_LARGE = { price: 100, cal: 40 };
-    static STUFFING_CHEESE = { price: 10, ca: 20 };
+    static STUFFING_CHEESE = { price: 10, cal: 20 };
     static STUFFING_SALAD = { price: 20, cal: 5 };
     static STUFFING_POTATO = { price: 15, cal: 10 };
     static TOPPING_CONDIMENT = { price: 15, cal: 0 };
@@ -28,7 +27,7 @@ class Hamburger {
             return fullPrice;
     }
 
-    calculateCal() {
+    calculateCalories() {
         let fullCalories = this.size.cal + this.stuffing.cal;
         this.toppings.forEach(topping => {
             fullCalories += topping.cal;
@@ -36,7 +35,4 @@ class Hamburger {
             return fullCalories;
     }
 
-    getToppings() {
-        return this.toppings;
-    }
 }
