@@ -1,23 +1,12 @@
-document.getElementById("submit-info").addEventListener("click",(e)=>{
-        const infoBlock = document.getElementById("info");
+let hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
+console.log(hamburger.getToppings());
+hamburger.addTopping(Hamburger.TOPPING_MAYO);
 
-        const inputName = document.getElementById("people-name");
-        const inputAge = document.getElementById("people-age");
-        const inputCarModel = document.getElementById("car-model");
-        const inputCarYear = document.getElementById("car-year");
 
-        let arrInputs = [inputName, inputAge, inputCarModel, inputCarYear];
+console.log("Calories: " + hamburger.calculateCal());
 
-        let valid = validate(arrInputs);
+console.log("Price: " + hamburger.calculatePrice());
 
-        if (valid) {
-                const personObj = new Person(inputName.value, inputAge.value);
-                const carObj = new Car(inputCarModel.value, inputCarYear.value);
-                carObj.setOwner(personObj);
-                console.log(carObj);
-                infoBlock.textContent = carObj.showInfo();
-        } else {
-                infoBlock.textContent = "";
-        }
+hamburger.addTopping(Hamburger.TOPPING_SAUCE);
 
-})
+console.log("Price with sauce: " + hamburger.calculatePrice());

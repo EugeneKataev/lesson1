@@ -1,44 +1,42 @@
 
-function Person(name, year) {
-    this.name = name;
-    this.year = year;
-    this.showInfo = function () {
-       let info = `${this.name}, ${this.year} лет`;
-        return info
+
+class Hamburger {
+    static SIZE_SMALL = { price: 50, cal: 20 };
+    static SIZE_LARGE = { price: 100, cal: 40 };
+    static STUFFING_CHEESE = { price: 10, ca: 20 };
+    static STUFFING_SALAD = { price: 20, cal: 5 };
+    static STUFFING_POTATO = { price: 15, cal: 10 };
+    static TOPPING_CONDIMENT = { price: 15, cal: 0 };
+    static TOPPING_MAYO = { price: 20, cal: 5 };
+    static TOPPING_SAUCE = { price: 15, cal: 0 };
+
+    constructor(size, stuffing) {
+        this.size = size;
+        this.stuffing = stuffing;
+        this.toppings = [];
     }
-}
 
-function Car(model, year) {
-    this.model = model;
-    this.year = year;
-    this.owner = null;
+    addTopping(topping) {
+        this.toppings.push(topping);
+    }
 
-    this.showInfo = function () {
+    calculatePrice() {
+        let fullPrice = this.size.price + this.stuffing.price;
+        this.toppings.forEach(topping => {
+            fullPrice += topping.price;
+        });
+            return fullPrice;
+    }
 
-        let info = `${this.model}, ${this.year}`
-        if (this.owner !== null) {
-            info += this.owner ? ` Владелец: ${this.owner.showInfo()}` : '';
-        }
+    calculateCal() {
+        let fullCalories = this.size.cal + this.stuffing.cal;
+        this.toppings.forEach(topping => {
+            fullCalories += topping.cal;
+        });
+            return fullCalories;
+    }
 
-        return info;
-    };
-
-    this.setOwner = function(owner) {
-        this.owner = owner;
-    };
-}
-
-function validate(arrInputs) {
-    let valid = true
-
-    arrInputs.forEach((elem) => {
-        if (elem.value === "" || (elem.id === "people-age" && elem.value < 18)) {
-            elem.classList.add("error");
-            valid = false;
-        } else {
-            elem.classList.remove("error");
-        }
-    });
-
-    return valid;
+    getToppings() {
+        return this.toppings;
+    }
 }
