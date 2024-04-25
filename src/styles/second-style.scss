@@ -1,0 +1,13 @@
+#add-user {
+  background: rgba(198, 230, 192, 0.8588235294);
+  border: none;
+  padding: 8px 22px;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 10px;
+  &:hover {
+    background: rgba(186, 226, 179, 0.9215686275);
+  }
+}
+
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
