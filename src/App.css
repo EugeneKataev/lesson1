@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'Accia';
+    src: url("./fonts/AcciaSans-Medium.woff");
+}
+@font-face {
+    font-family: 'Accia-Bold';
+    src: url("./fonts/AcciaSans-Bold.woff");
+}
+
+body {
+    font-family: 'Accia';
+}
+.App {
+    text-align: center;
+    max-width: 100%;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.full-panel{width: 100%}
+.leftPanel{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    background-color: #5D6884;
+    height: 100vh;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.leftPanelHide{
+    text-align: left;
+    max-width: 100px;
+    padding-left: 0;
+    padding-right: 5px;
+}
+.leftPanelShow ul{
+    font-size: 25px;
+}
+.leftPanelHide ul{
+    padding-left: 3px;
+    font-size: 16px;
+}
+.leftPanelShow{
+    padding-left: 20px;
+    max-width: 300px;
+}
+.leftPanel-head {
+    float: left;
+    width: 100%;
+}
+.leftPanel-menu {
+    text-align: left;
+    float: left;
+    width: 100%;
+    font-family: Accia-Bold;
+}
+.leftPanel-menu li{
+    list-style: none;
+    padding: 6px 0;
+    cursor: pointer;
+}
+.leftPanel-head a{
+    float: right;
+    cursor: pointer;
+    padding: 1px 5px;
+    border-radius: 9px;
+}
+.leftPanel-head img{
+    padding-bottom: 3px;
+}
+.leftPanel-head a:hover{
+    background-color: rgba(255,255,255,0.15);
+}
+.leftPanel-menu a{
+    text-decoration: none;
+    color: #fff
+}
+.leftPanel-menu a.active {
+    color: #221f14;
+}
+.leftPanel-menu a.active:hover {
+    color: #221f14;
+}
+.leftPanel-menu a:hover{
+    color: #cfcfd0;
+}
+.leftPanel-quick-menu{
+    flex: 1;
+}
+.leftPanel-quick-menu .quick-menu-btn{
+    margin-top: 44%;
+}
+.leftPanel-quick-menu .quick-menu-btn ul{
+    float: left;
+}
+.leftPanel-quick-menu .quick-menu-btn li{
+    list-style: none;
+    padding: 6px 0;
+    float: left;
+}
+.leftPanel-quick-menu .quick-menu-btn a{
+    float: left;
+    border-radius: 5px;
+    border: 3px solid #363636;
+    background: #ECECEC;
+    color: #595959;
+    padding: 6px 9px;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 600;
+    cursor: pointer;
+}
+.leftPanelHide .leftPanel-quick-menu .quick-menu-btn a{
+    font-size: 11px;
+    padding: 6px 3px;
+    width: 90px;
+    text-align: center;
+}
+.leftPanel-profile {
+    float: left;
+    width: 100%;
+    padding-left: 32px;
+    margin-bottom: 36px;
+    margin-top: 10px;
+}
+.leftPanel-profile-user{
+    float: left;
+    width: 100%;
+}
+.avatar{
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #AAB8E9;
+}
+.leftPanel-profile-user .avatar{
+    background-color: coral;
+    float: left;
+}
+.leftPanel-profile-user .user-name{
+    float: left;
+    padding: 13px 0 0 12px;
+}
+.leftPanel-profile-user .user-name p{
+    padding-bottom: 0;
+    font-size: 17px;
+    color: #fff;
+}
+.leftPanelHide .leftPanel-profile-user .user-name{
+    display: none;
+}
+.leftPanelHide .leftPanel-profile{
+    padding-left: 24px;
+}
+.head-admin-panel{
+    background-color: #595959a3;
+    width: 100%;
+    display: block;
+    height: 28px;
+    float: left;
+}
+.head-admin-panel p{
+    margin: 0;
+    float: left;
+    padding-left: 20px;
+}
+.head-admin-panel a{
+    float: right;
+    color: #221e1e !important;
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 25px;
+    cursor: pointer;
+}
+.head-admin-panel a:hover{
+    color: red !important;
+}
+@media (max-width: 1600px) {
+    .leftPanelShow{
+        padding-left: 0;
+    }
+    .leftPanelShow ul {
+        padding-left: 20px;
+    }
+    .leftPanel-profile {
+        padding-left: 20px;
+    }
+}
+@media (max-width: 1380px) {
+    .leftPanel-profile-user .avatar{
+        width: 40px;
+        height: 40px;
+    }
+    .leftPanel-profile-user .user-name{
+        padding: 8px 0 0 8px;
+    }
+    .leftPanelShow ul{
+        font-size: 23px;
+    }
+    .leftPanel-quick-menu .quick-menu-btn a{
+        font-size: 14px;
+    }
+    .leftPanel-profile-user .user-name p{
+        font-size: 16px;
+    }
+}
