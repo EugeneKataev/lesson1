@@ -1,0 +1,93 @@
+.contacts-table {
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    margin: auto;
+    border: 1px solid #cccaca;
+    border-radius: 6px;
+    padding: 10px 10px 1px 10px;
+}
+
+.contacts-header {
+    display: flex;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.contacts-row {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+.contacts-row:last-child {
+    border-bottom: none;
+}
+
+.contacts-row:hover{
+    background-color: #fff9ee;;
+}
+
+.contacts-item {
+    flex: 1;
+    padding: 5px;
+}
+
+.contacts-header-item {
+    flex: 1;
+    padding: 5px;
+}
+
+.delete-button {
+    background-image: url('/src/icon/icons8-delete.svg');
+    float: left;
+    width: 35px;
+    background-position: center;
+    height: 22px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-left: 45px;
+}
+
+.edit-button {
+    background-image: url('/src/icon/icons8-edit.svg');
+    float: right;
+    width: 35px;
+    background-position: center;
+    height: 22px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    margin-right: 45px;
+}
+.edit-button a{
+    height: inherit;
+    display: block;
+}
+.head-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    margin: 0;
+}
+.head-menu ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+.head-menu a{
+    padding: 10px 0;
+    font-size: 19px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    color: #6137b8;
+}
+.head-menu a.active{
+    border-bottom: 2px solid;
+}
+.error {
+    color: red;
+}
