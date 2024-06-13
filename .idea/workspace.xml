@@ -26,8 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74d22aaf-2d53-4443-9464-ffb408f646a8" name="Default Changelist" comment="fix data.json">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/AddTodoItemForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SignInForm/SignInForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SignInForm/SignInForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/TodosPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/TodosPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -126,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717687032784</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix todospage">
+      <created>1718238751193</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718238751194</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,9 +171,14 @@
     <MESSAGE value="init example_33" />
     <MESSAGE value="fix data.json" />
     <MESSAGE value="init example_34" />
-    <option name="LAST_COMMIT_MESSAGE" value="init example_34" />
+    <MESSAGE value="fix todospage" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix todospage" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="629" y="298" key="EditFileWatcherDialog" timestamp="1718239492409">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="629" y="298" key="EditFileWatcherDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1718239492409" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1717352458929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -175,10 +191,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1717066789369" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1717687132301">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1718238766673">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1717687132301" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1718238766673" />
     <state x="804" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1716981755677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

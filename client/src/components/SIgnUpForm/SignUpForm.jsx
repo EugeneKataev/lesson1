@@ -15,7 +15,7 @@ const SignUpSchema = Yup.object({
 
 export default function SignUpForm({ handleSignUp }) {
   return (
-    <div className='SignUpForm'>
+    <div className='SignUpForm sign-block'>
       <h2>Sign up:</h2>
       <Formik
         initialValues={({
@@ -32,21 +32,14 @@ export default function SignUpForm({ handleSignUp }) {
       >
         {({ errors }) => (
           <Form>
-            <p>
-              {errors.login && (<span className='error'>{errors.login}</span>)}
-              <Field
-                name="login"
-                placeholder="Login"
-              />
-            </p>
-            <p>
-              {errors.password && <span className='error'>{errors.password}</span>}
-              <Field
-                name="password"
-                type="password"
-                placeholder="Password"
-              />
-            </p>
+              <div className="input-sign-block">
+                  {errors.login && <span className='error'>{errors.login}</span>}
+                  <Field name="login" placeholder="Login" />
+              </div>
+              <div className="input-sign-block">
+                  {errors.password && <span className='error'>{errors.password}</span>}
+                  <Field name="password" type="password" placeholder="Password" />
+              </div>
             <input type='submit' value="Sign Up" />
           </Form>
         )}

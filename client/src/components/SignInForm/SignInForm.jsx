@@ -14,7 +14,7 @@ const SignInSchema = Yup.object({
 
 export default function SignInForm({ handleSignIn }) {
   return (
-    <div className='SignInForm'>
+    <div className='SignInForm sign-block'>
       <h2>Sign in:</h2>
       <Formik
         initialValues={({
@@ -31,21 +31,14 @@ export default function SignInForm({ handleSignIn }) {
       >
         {({ errors }) => (
           <Form>
-            <p>
-              {errors.login && (<span className='error'>{errors.login}</span>)}
-              <Field
-                name="login"
-                placeholder="Login"
-              />
-            </p>
-            <p>
-              {errors.password && <span className='error'>{errors.password}</span>}
-              <Field
-                name="password"
-                type="password"
-                placeholder="Password"
-              />
-            </p>
+              <div className="input-sign-block">
+                  {errors.login && <span className='error'>{errors.login}</span>}
+                  <Field name="login" placeholder="Login" />
+              </div>
+              <div className="input-sign-block">
+                  {errors.password && <span className='error'>{errors.password}</span>}
+                  <Field name="password" type="password" placeholder="Password" />
+              </div>
             <input type='submit' value="Sign In" />
           </Form>
         )}
