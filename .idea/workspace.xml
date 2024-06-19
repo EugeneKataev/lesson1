@@ -26,13 +26,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74d22aaf-2d53-4443-9464-ffb408f646a8" name="Default Changelist" comment="fix data.json">
-      <change afterPath="$PROJECT_DIR$/client/src/components/AddTodoItemForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AddTodo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Todo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TodoList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/slice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SignInForm/SignInForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SignInForm/SignInForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/TodosPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/TodosPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/__MACOSX/public/._robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/SigninForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AddTodoItemForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SignInForm/SignInForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/TodoList/TodoList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/MainPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/TodosPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/urls.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +110,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -108,6 +135,11 @@
       <workItem from="1717455623931" duration="17961000" />
       <workItem from="1717677744283" duration="11284000" />
       <workItem from="1718206075721" duration="8499000" />
+      <workItem from="1718635608955" duration="105000" />
+      <workItem from="1718637623892" duration="818000" />
+      <workItem from="1718711315257" duration="7071000" />
+      <workItem from="1718802626355" duration="5521000" />
+      <workItem from="1718814983626" duration="7784000" />
     </task>
     <task id="LOCAL-00001" summary="init example_33">
       <created>1716981811550</created>
@@ -137,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718238751194</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix style and AddTodoItemForm">
+      <created>1718243688167</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718243688167</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,36 +211,37 @@
     <MESSAGE value="fix data.json" />
     <MESSAGE value="init example_34" />
     <MESSAGE value="fix todospage" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix todospage" />
+    <MESSAGE value="fix style and AddTodoItemForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix style and AddTodoItemForm" />
   </component>
   <component name="WindowStateProjectService">
     <state x="629" y="298" key="EditFileWatcherDialog" timestamp="1718239492409">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="629" y="298" key="EditFileWatcherDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1718239492409" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1717352458929">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1718637773440">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1717352458929" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1718637773440" />
     <state x="1256" y="427" key="Github.Dialog.Accounts.Choose" timestamp="1716982351876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1256" y="427" key="Github.Dialog.Accounts.Choose/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1716982351876" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1717066789369">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1718712625170">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1717066789369" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1718238766673">
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1718712625170" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1718243693173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1718238766673" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1718243693173" />
     <state x="804" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1716981755677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="804" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1716981755677" />
-    <state x="342" y="203" key="new project wizard" timestamp="1716987182590">
+    <state x="342" y="203" key="new project wizard" timestamp="1718637805997">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="342" y="203" key="new project wizard/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1716987182590" />
+    <state x="342" y="203" key="new project wizard/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1718637805997" />
   </component>
 </project>
