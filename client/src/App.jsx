@@ -3,20 +3,13 @@ import axios from 'axios';
 import './App.scss';
 import MainPage from './pages/MainPage';
 import TodosPage from './pages/TodosPage';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
-  
-  const [isAuthorized, setIsAuthorized] = useState(false);
-  const [token, setToken] = useState(null);
 
-  useEffect(() => {
-    const savedToken = localStorage.getItem('token');
-    if (savedToken) {
-      setToken(savedToken);
-      setIsAuthorized(true);
-    }
-  }, []);
+  const savedToken = localStorage.getItem('token');
+  const [isAuthorized, setIsAuthorized] = useState(Boolean(savedToken));
+  const [token, setToken] = useState(savedToken || null);
   
   const handleUserSignIn = (token) => {
     console.log(`my token: ${token}`);

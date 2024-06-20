@@ -26,13 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74d22aaf-2d53-4443-9464-ffb408f646a8" name="Default Changelist" comment="fix data.json">
-      <change afterPath="$PROJECT_DIR$/client/src/components/AddTodoItemForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SIgnUpForm/SignUpForm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SignInForm/SignInForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SignInForm/SignInForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/TodosPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/TodosPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
