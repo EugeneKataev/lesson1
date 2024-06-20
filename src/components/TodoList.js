@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { loadTodos, toggleTodo, editTodo, deleteTodo, clearTodos } from './store/slice';
+import { loadTodos, toggleTodo, editTodo, deleteTodo, clearTodos } from '../store/slice';
 import Todo from './Todo';
-import data from './data.json';
+import data from '../data.json';
 
 const TodoList = () => {
     const todos = useSelector(state => state.todos);
